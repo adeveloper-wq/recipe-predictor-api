@@ -1,0 +1,11 @@
+version: '3'
+services:
+  predictor:
+    image: predictor:latest
+    build: .
+    restart: "no"
+    ports:
+      - "8000:8000"
+    environment:
+      - TRANSFORMERS_OFFLINE=1
+      - PYTHONUNBUFFERED=1
